@@ -522,7 +522,7 @@ img {
   background-color: #fcfcfc;
   transform: translate(-50%, -50%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 24px;
+  padding: 72px 24px 24px 24px;
 }
 
 .backdrop:not(.is-open) .modal {
@@ -544,6 +544,7 @@ img {
   position: absolute;
   top: 24px;
   right: 24px;
+  cursor: pointer;
 }
 
 .modal-close-btn:hover,
@@ -557,10 +558,7 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close-btn:hover .modal-close-icon {
-  fill: #ffffff;
-}
-
+.modal-close-btn:hover .modal-close-icon,
 .modal-close-btn:focus .modal-close-icon {
   fill: #ffffff;
 }
@@ -572,5 +570,43 @@ img {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
-  margin-top: 48px;
+  margin-bottom: 16px;
+}
+
+.modal-label {
+  display: block;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  margin-bottom: 4px;
+}
+
+.modal-input-group {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.modal-input-field {
+  width: 360px;
+  height: 40px;
+  padding: 0;
+  padding-left: 38px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+}
+
+.modal-input-field:focus {
+  border: 1px solid #4d5ae5;
+}
+
+.modal-input-icon {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  fill: #2e2f42;
+}
+
+.modal-input-field:focus + .modal-input-icon {
+  fill: #4d5ae5;
 }
